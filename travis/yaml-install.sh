@@ -13,6 +13,11 @@ else
   # Travis doesn't always have pecl installed for alpha/beta php versions
   # Do what pecl should do manually
 
+  echo "=================================================================="
+  echo "MANUAL INSTALL OF PECL MODULE"
+  echo " - Travis doesn't have a working pecl binary for ${TRAVIS_PHP_VERSION}"
+  echo "=================================================================="
+
   # Download and unpack latest tarball
   curl -o yaml.tgz http://pecl.php.net/get/yaml
   tar xzf yaml.tgz
