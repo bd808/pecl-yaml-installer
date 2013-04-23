@@ -1,0 +1,8 @@
+language: php
+php:
+  - 5.2
+before_script:
+  - pecl install yaml-dev
+  - 'echo "extension=yaml.so" >>
+    ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini'
+script: php -m | grep yaml
