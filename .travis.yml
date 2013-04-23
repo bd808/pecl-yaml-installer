@@ -5,7 +5,7 @@ before_script:
   - pear uninstall --nodeps --ignore-errors pear.symfony-project.com/yaml || true
   - pyrus uninstall -f pear.symfony-project.com/yaml || true
 script:
-  - pecl install yaml-devel
+  - pecl install yaml-devel --with-yaml
   - 'echo "extension=yaml.so" >>
     ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini'
-  - php -m | grep yaml
+  - php --ri yaml
