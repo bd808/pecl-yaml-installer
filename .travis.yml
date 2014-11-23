@@ -1,13 +1,13 @@
-language: "php"
+language: php
 php:
-  - "5.2"
-  - "5.3"
-  - "5.4"
-  - "5.5"
+  - 5.3
+  - 5.4
+  - 5.5
+  - 5.6
 before_script:
   # only needed for php 5.2?
   - "pear uninstall --nodeps --ignore-errors pear.symfony-project.com/yaml ||
     true"
 script:
-  - "./travis/yaml-install.sh"
-  - "php --ri yaml"
+  - ./travis/yaml-install.sh
+  - php --ri yaml
