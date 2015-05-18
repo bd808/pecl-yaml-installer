@@ -8,6 +8,8 @@ Test install of PECL yaml.
 Use the awesome [Travis CI][] continuous integration service to test
 installing the [yaml PECL][] module. See [.travis.yml][] for more details.
 
+Last tested for yaml 1.2.0
+
 [Travis CI]: http://about.travis-ci.org/
 [yaml PECL]: http://pecl.php.net/package/yaml
 [.travis.yml]: .travis.yml
