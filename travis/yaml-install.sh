@@ -5,8 +5,13 @@
 
 set -e
 
+# Find the local ini file
+PHP_INI=$(php --ini | grep Loaded | awk '{print $NF}')
+
 if pecl &>/dev/null ; then
-  # pecl is present for this version of php
+  # PECL is present for this version of php
+
+  pecl config-set php_ini $PHP_INI
   printf "\n" | pecl install yaml-devel
 
 else
@@ -29,6 +34,6 @@ else
   make
 
   # install our new module
-  sudo make install
-  echo "extension=yaml.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  make install
+  echo "extension=yaml.so" >> $PHP_INI
 fi
