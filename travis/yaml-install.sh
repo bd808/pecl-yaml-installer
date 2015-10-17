@@ -17,7 +17,7 @@ cd yaml-*
 phpize
 ./configure --with-yaml
 make
-printf "s\n" | make test
+NO_INTERACTION=1 REPORT_EXIT_STATUS=1 make test
 
 # install our new module
 make install
