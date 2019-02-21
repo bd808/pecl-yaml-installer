@@ -3,8 +3,13 @@ dist: xenial
 php:
   - 7.1
   - 7.2
+  - 7.3
   - nightly
 sudo: false
+matrix:
+  fast_finish: true
+  allow_failures:
+    - php: nightly
 script:
   - ./travis/yaml-install.sh
   - php --ri yaml
