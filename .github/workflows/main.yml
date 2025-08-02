@@ -38,7 +38,7 @@ jobs:
           update: true
       - name: Test extension
         run: >-
-          curl -o yaml.tgz http://pecl.php.net/get/yaml &&
+          curl -o yaml.tgz https://pecl.php.net/get/yaml &&
           tar xzf yaml.tgz &&
           cd yaml-* &&
           phpize &&
